@@ -8,8 +8,8 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://apixixi.63136.icu; base-uri 'none'; form-action 'none'; object-src 'none'" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <title>冬瓜强 · 积分站</title>
-    <script type="module" crossorigin src="./assets/index-C-SW410w.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BmCkvwOM.css">
+    <script type="module" crossorigin src="./assets/index-aNAJtCpG.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DQI0IER0.css">
   </head>
   <body>
     <div class="app">
@@ -54,6 +54,8 @@
         <span><strong>界面设计预览。</strong>页面中的账户、瓜标值、排行与商店均为<strong>示例数据</strong>，注册、登录、绑定、积分与兑换服务<strong>尚未接入</strong>，正式开放以站内公告为准。</span>
       </p>
 
+      <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>★ 瓜标值</span><span>★ 弹幕排行</span><span>★ igua 商店</span><span>★ 识别码绑定</span><span>★ 筹备中</span><span>★ 谢谢你的陪伴</span><span>★ 瓜标值</span><span>★ 弹幕排行</span><span>★ igua 商店</span><span>★ 识别码绑定</span><span>★ 筹备中</span><span>★ 谢谢你的陪伴</span></div></div>
+
       <main id="main">
         <!-- ================= 首页 ================= -->
         <section class="view is-active" id="view-home" data-view="home" aria-labelledby="home-title">
@@ -61,7 +63,7 @@
             <div class="hero-copy">
               <span class="status"><span class="status-dot" aria-hidden="true"></span>筹备中 · v0.2.0 设计预览</span>
               <p class="eyebrow">冬瓜强直播间 · 椰汁糕冬瓜强</p>
-              <h1 id="home-title" class="grad-text">每一份支持，<br />都有记录。</h1>
+              <h1 id="home-title" class="grad-text">每一份支持，<br />都有<span class="circled">记录<svg class="circled-ring" viewBox="0 0 132 52" aria-hidden="true"><path d="M10 28C12 12 44 5 72 6s52 9 50 21-26 19-58 19S8 40 10 28Z" fill="none" stroke-linecap="round"/></svg></span>。</h1>
               <svg class="hero-squiggle" viewBox="0 0 220 14" aria-hidden="true"><path d="M3 10c18-8 30 6 48-2s30 6 48-2 30 6 48-2 30 6 48-2" fill="none" stroke-linecap="round"/></svg>
               <p class="description">这是积分站的前台设计预览。账户注册、瓜标值、弹幕排行与 igua 商店的界面已先行呈现，业务功能仍在筹备，暂不接入真实数据。</p>
               <div class="hero-actions">
@@ -71,7 +73,8 @@
             </div>
 
             <aside class="hero-card" aria-label="开放提醒">
-              <span class="mascot" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><linearGradient id="mascot-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c3bdf6"/><stop offset="1" stop-color="#6a5fd0"/></linearGradient></defs><path d="M60 8l14 30 33 4-24 23 6 33-29-16-29 16 6-33-24-23 33-4z" fill="url(#mascot-g)" stroke="#3b348c" stroke-width="6" stroke-linejoin="round"/><circle cx="48" cy="54" r="5" fill="#241f5e"/><circle cx="72" cy="54" r="5" fill="#241f5e"/><path d="M50 66q10 9 20 0" fill="none" stroke="#241f5e" stroke-width="5" stroke-linecap="round"/><circle cx="38" cy="63" r="6" fill="#f2a6c0" opacity=".75"/><circle cx="82" cy="63" r="6" fill="#f2a6c0" opacity=".75"/><ellipse cx="50" cy="30" rx="9" ry="5" fill="#fff" opacity=".55" transform="rotate(-20 50 30)"/></svg></span>
+              <span class="burst" aria-hidden="true"><span>筹备中</span></span>
+              <span class="mascot" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><linearGradient id="mascot-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c3bdf6"/><stop offset="1" stop-color="#6a5fd0"/></linearGradient></defs><path d="M60 8l14 30 33 4-24 23 6 33-29-16-29 16 6-33-24-23 33-4z" fill="url(#mascot-g)" stroke="#3b348c" stroke-width="6" stroke-linejoin="round"/><circle class="mascot-eye" cx="48" cy="54" r="5" fill="#241f5e"/><circle class="mascot-eye" cx="72" cy="54" r="5" fill="#241f5e"/><path d="M50 66q10 9 20 0" fill="none" stroke="#241f5e" stroke-width="5" stroke-linecap="round"/><circle cx="38" cy="63" r="6" fill="#f2a6c0" opacity=".75"/><circle cx="82" cy="63" r="6" fill="#f2a6c0" opacity=".75"/><ellipse cx="50" cy="30" rx="9" ry="5" fill="#fff" opacity=".55" transform="rotate(-20 50 30)"/></svg></span>
               <div class="hero-card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="m12 2 2.6 6.3 6.8.5-5.2 4.4 1.6 6.6L12 16.9 6.2 19.8l1.6-6.6L2.6 8.8l6.8-.5L12 2Z"/></svg>
               </div>
@@ -84,32 +87,34 @@
               </ul>
               <div class="hero-card-footer"><span class="notice-dot" aria-hidden="true"></span>暂未开放注册</div>
             </aside>
+            <svg class="hero-arrow" viewBox="0 0 120 96" aria-hidden="true"><path d="M8 10c44 4 82 30 96 70" fill="none" stroke-linecap="round"/><path d="M92 74l12 8 2-18" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
 
-          <div class="section-head">
+          <svg class="wave-divider" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 42c120-30 240 24 360 12S600 8 720 26s240 32 360 12 240-30 360-14v44H0Z"/></svg>
+          <div class="section-head reveal">
             <h2>即将开放的功能</h2>
             <p>下列模块界面已设计，功能待服务端接入后开放。</p>
           </div>
           <div class="feature-grid">
-            <article class="feature-card">
+            <article class="feature-card reveal">
               <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg></div>
               <h3>账户注册与绑定</h3>
               <p>沿用直播间识别码绑定思路，绑定注册后达到送礼门槛方可开户。</p>
               <button class="link-btn" type="button" data-nav="auth" data-auth-tab="register">查看界面 <span aria-hidden="true">→</span></button>
             </article>
-            <article class="feature-card">
+            <article class="feature-card reveal">
               <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg></div>
               <h3>瓜标值累计</h3>
               <p>按送礼与互动累计瓜标值，明细可查，兑换比例由后台配置。</p>
               <button class="link-btn" type="button" data-nav="points">查看界面 <span aria-hidden="true">→</span></button>
             </article>
-            <article class="feature-card">
+            <article class="feature-card reveal">
               <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v10H8l-5 4V5Zm4 3v2h10V8H7Zm0 4v2h7v-2H7Z"/></svg></div>
               <h3>弹幕排行</h3>
               <p>礼物与弹幕按接收时间排序，去重后记分，呈现互动排行。</p>
               <button class="link-btn" type="button" data-nav="rank">查看界面 <span aria-hidden="true">→</span></button>
             </article>
-            <article class="feature-card">
+            <article class="feature-card reveal">
               <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h10l1 3H6l1-3Zm-2 5h14l-1 11H6L5 9Zm4 2v7h2v-7H9Zm4 0v7h2v-7h-2Z"/></svg></div>
               <h3>igua 商店</h3>
               <p>瓜标值兑换周边与权益的商店界面，下单与兑换尚未接入。</p>
@@ -118,20 +123,20 @@
           </div>
 
           <div class="split">
-            <div class="panel">
+            <div class="panel reveal">
               <div class="section-head section-head-tight">
                 <h2>如何参与</h2>
                 <p>流程为规划说明，功能开放后以站内指引为准。</p>
               </div>
               <ol class="steps">
-                <li><span class="step-num">1</span><div><strong>获取识别码</strong><span>在直播间按指引获取专属识别码。</span></div></li>
-                <li><span class="step-num">2</span><div><strong>绑定并注册</strong><span>使用识别码绑定斗鱼账号，完成注册。</span></div></li>
-                <li><span class="step-num">3</span><div><strong>达到送礼门槛</strong><span>满足后台设置的单次/累计鱼翅门槛后开户。</span></div></li>
-                <li><span class="step-num">4</span><div><strong>累计瓜标值</strong><span>互动与送礼按比例转为瓜标值，可在商店兑换。</span></div></li>
+                <li class="reveal"><span class="step-num">1</span><div><strong>获取识别码</strong><span>在直播间按指引获取专属识别码。</span></div></li>
+                <li class="reveal"><span class="step-num">2</span><div><strong>绑定并注册</strong><span>使用识别码绑定斗鱼账号，完成注册。</span></div></li>
+                <li class="reveal"><span class="step-num">3</span><div><strong>达到送礼门槛</strong><span>满足后台设置的单次/累计鱼翅门槛后开户。</span></div></li>
+                <li class="reveal"><span class="step-num">4</span><div><strong>累计瓜标值</strong><span>互动与送礼按比例转为瓜标值，可在商店兑换。</span></div></li>
               </ol>
             </div>
 
-            <div class="panel panel-room">
+            <div class="panel panel-room reveal">
               <div class="section-head section-head-tight">
                 <h2>房间信息</h2>
                 <p>基础信息，公开可见。</p>
@@ -149,13 +154,13 @@
 
         <!-- ================= 瓜标值 ================= -->
         <section class="view" id="view-points" data-view="points" aria-labelledby="points-title" hidden>
-          <div class="section-head">
+          <div class="section-head reveal">
             <h1 id="points-title" class="grad-text">我的瓜标值</h1>
             <p>账户与积分服务尚未接入，以下为界面与示例数据。</p>
           </div>
 
           <div class="points-layout">
-            <div class="balance-card">
+            <div class="balance-card reveal">
               <div class="balance-top">
                 <div class="avatar" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg>
@@ -175,13 +180,13 @@
             </div>
 
             <div class="stat-grid">
-              <div class="stat-card"><p class="stat-num">—</p><p class="stat-label">本月新增</p></div>
-              <div class="stat-card"><p class="stat-num">—</p><p class="stat-label">累计送礼门槛</p></div>
-              <div class="stat-card"><p class="stat-num">—</p><p class="stat-label">可兑换权益</p></div>
+              <div class="stat-card reveal"><p class="stat-num">—</p><p class="stat-label">本月新增</p></div>
+              <div class="stat-card reveal"><p class="stat-num">—</p><p class="stat-label">累计送礼门槛</p></div>
+              <div class="stat-card reveal"><p class="stat-num">—</p><p class="stat-label">可兑换权益</p></div>
             </div>
           </div>
 
-          <div class="panel">
+          <div class="panel reveal">
             <div class="panel-head">
               <h2>瓜标值明细</h2>
               <span class="pill pill-demo">示例数据</span>
@@ -202,23 +207,23 @@
 
         <!-- ================= 弹幕排行 ================= -->
         <section class="view" id="view-rank" data-view="rank" aria-labelledby="rank-title" hidden>
-          <div class="section-head">
+          <div class="section-head reveal">
             <h1 id="rank-title" class="grad-text">弹幕排行</h1>
             <p>礼物与弹幕按接收时间排序、去重记分。榜单尚未接入真实数据。</p>
           </div>
 
-          <div class="rank-tabs" role="tablist" aria-label="排行周期">
+          <div class="rank-tabs reveal" role="tablist" aria-label="排行周期">
             <button class="rank-tab is-active" type="button" role="tab" aria-selected="true" data-rank="day">日榜</button>
             <button class="rank-tab" type="button" role="tab" aria-selected="false" data-rank="week">周榜</button>
             <button class="rank-tab" type="button" role="tab" aria-selected="false" data-rank="total">总榜</button>
             <span class="pill pill-demo rank-demo-flag">示例数据</span>
           </div>
 
-          <div class="panel">
+          <div class="panel reveal">
             <div class="podium" aria-label="前三名（示例）">
-              <div class="podium-item podium-2"><span class="podium-rank">2</span><span class="podium-avatar" aria-hidden="true">瓜</span><span class="podium-name">示例用户 B</span><span class="podium-score mono">—</span></div>
-              <div class="podium-item podium-1"><span class="podium-crown" aria-hidden="true"><svg viewBox="0 0 24 14"><path d="M2 12l1.6-7 4.2 3.4L12 2l4.2 6.4L20.4 5 22 12z"/></svg></span><span class="podium-rank">1</span><span class="podium-avatar" aria-hidden="true">冬</span><span class="podium-name">示例用户 A</span><span class="podium-score mono">—</span></div>
-              <div class="podium-item podium-3"><span class="podium-rank">3</span><span class="podium-avatar" aria-hidden="true">强</span><span class="podium-name">示例用户 C</span><span class="podium-score mono">—</span></div>
+              <div class="podium-item reveal podium-2"><span class="podium-rank">2</span><span class="podium-avatar" aria-hidden="true">瓜</span><span class="podium-name">示例用户 B</span><span class="podium-score mono">—</span></div>
+              <div class="podium-item reveal podium-1"><span class="podium-crown" aria-hidden="true"><svg viewBox="0 0 24 14"><path d="M2 12l1.6-7 4.2 3.4L12 2l4.2 6.4L20.4 5 22 12z"/></svg></span><span class="podium-rank">1</span><span class="podium-avatar" aria-hidden="true">冬</span><span class="podium-name">示例用户 A</span><span class="podium-score mono">—</span></div>
+              <div class="podium-item reveal podium-3"><span class="podium-rank">3</span><span class="podium-avatar" aria-hidden="true">强</span><span class="podium-name">示例用户 C</span><span class="podium-score mono">—</span></div>
             </div>
 
             <div class="table-wrap">
@@ -239,18 +244,18 @@
 
         <!-- ================= igua 商店 ================= -->
         <section class="view" id="view-store" data-view="store" aria-labelledby="store-title" hidden>
-          <div class="section-head">
+          <div class="section-head reveal">
             <h1 id="store-title" class="grad-text">igua 商店</h1>
             <p>使用瓜标值兑换周边与权益。兑换、下单与订单查询尚未接入。</p>
           </div>
 
-          <div class="store-banner">
+          <div class="store-banner reveal">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1.5 20.5h21L12 2Zm-.9 6.6v4.2h1.8V8.6h-1.8Zm0 5.6v1.9h1.8v-1.9h-1.8Z"/></svg>
             <span>商店为浏览预览，<strong>尚未接入兑换、下单与订单查询</strong>；商品与所需瓜标值以后台配置为准。</span>
           </div>
 
           <div class="store-grid">
-            <article class="goods-card">
+            <article class="goods-card reveal">
               <div class="goods-thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h10l1 3H6l1-3Zm-2 5h14l-1 11H6L5 9Z"/></svg></div>
               <div class="goods-body">
                 <span class="goods-tag">周边</span>
@@ -259,7 +264,7 @@
                 <div class="goods-foot"><span class="goods-price"><span class="unit">瓜</span> ——</span><button class="btn btn-ghost btn-sm" type="button" data-demo="兑换功能尚未接入">兑换</button></div>
               </div>
             </article>
-            <article class="goods-card">
+            <article class="goods-card reveal">
               <div class="goods-thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4V6Zm2 2v8h12V8H6Zm2 2h8v2H8v-2Z"/></svg></div>
               <div class="goods-body">
                 <span class="goods-tag">权益</span>
@@ -268,7 +273,7 @@
                 <div class="goods-foot"><span class="goods-price"><span class="unit">瓜</span> ——</span><button class="btn btn-ghost btn-sm" type="button" data-demo="兑换功能尚未接入">兑换</button></div>
               </div>
             </article>
-            <article class="goods-card">
+            <article class="goods-card reveal">
               <div class="goods-thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v6c0 4 3.4 7.4 8 8 4.6-.6 8-4 8-8V7l-8-4Zm0 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg></div>
               <div class="goods-body">
                 <span class="goods-tag">周边</span>
@@ -277,7 +282,7 @@
                 <div class="goods-foot"><span class="goods-price"><span class="unit">瓜</span> ——</span><button class="btn btn-ghost btn-sm" type="button" data-demo="兑换功能尚未接入">兑换</button></div>
               </div>
             </article>
-            <article class="goods-card">
+            <article class="goods-card reveal">
               <div class="goods-thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5V4Zm2 3v2h10V7H7Zm0 4v2h10v-2H7Zm0 4v2h7v-2H7Z"/></svg></div>
               <div class="goods-body">
                 <span class="goods-tag">权益</span>
@@ -292,7 +297,7 @@
         <!-- ================= 登录 / 注册 ================= -->
         <section class="view" id="view-auth" data-view="auth" aria-labelledby="auth-title" hidden>
           <div class="auth-wrap">
-            <div class="auth-aside" aria-hidden="true">
+            <div class="auth-aside reveal" aria-hidden="true">
               <img class="auth-aside-mark" src="./assets/logo-CUlDWl7l.png" alt="" />
               <h2>冬瓜强积分站</h2>
               <p>绑定直播间识别码，注册后达到送礼门槛即可开户，累计你的瓜标值。</p>
@@ -303,7 +308,7 @@
               </ul>
             </div>
 
-            <div class="auth-panel">
+            <div class="auth-panel reveal">
               <h1 id="auth-title" class="auth-title grad-text">账号</h1>
               <div class="auth-tabs" role="tablist" aria-label="登录或注册">
                 <button class="auth-tab is-active" type="button" role="tab" aria-selected="true" data-auth-tab="login">登录</button>
@@ -331,6 +336,7 @@
       </main>
 
       <footer class="footer">
+        <svg class="footer-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 32c160-26 320 22 480 14S800 6 960 22s320 26 480 8v28H0Z"/></svg>
         <div class="footer-inner">
           <div class="footer-brand">
             <img class="brand-mark brand-mark-sm" src="./assets/logo-CUlDWl7l.png" alt="" />
