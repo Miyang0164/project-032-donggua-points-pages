@@ -3,33 +3,348 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="冬瓜强直播间积分站，账户注册与积分查询即将开放。" />
+    <meta name="description" content="冬瓜强直播间积分站前台设计预览：首页、瓜标值、弹幕排行、igua 商店与账号界面，功能筹备中，页面为示例数据。" />
     <meta name="color-scheme" content="light" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <title>冬瓜强 · 积分站</title>
-    <script type="module" crossorigin src="./assets/index-CUJHuN6Q.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CnH0DwLU.css">
+    <script type="module" crossorigin src="./assets/index-hh7urfyP.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BHPA94oS.css">
   </head>
   <body>
-    <div class="page">
-      <header><a class="brand" href="./" aria-label="冬瓜强积分站首页"><span class="brand-mark" aria-hidden="true">冬</span><span>冬瓜强<span class="brand-subtitle">积分站</span></span></a><span class="room">斗鱼 · 63136</span></header>
-      <main>
-        <section class="intro" aria-labelledby="title">
-          <span class="status"><span aria-hidden="true"></span>筹备中</span>
-          <p class="eyebrow">冬瓜强直播间</p>
-          <h1 id="title">每一份支持，<br />都有记录。</h1>
-          <p class="description">积分站正在准备中。<br />账户注册与积分查询将在准备完成后开放。</p>
-          <a class="live-link" href="https://www.douyu.com/63136" target="_blank" rel="noopener noreferrer">去直播间看看 <span aria-hidden="true">↗</span></a>
+    <div class="app">
+      <a class="skip-link" href="#main">跳到主要内容</a>
+
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="#/home" data-nav="home" aria-label="冬瓜强积分站首页">
+            <span class="brand-mark" aria-hidden="true">冬</span>
+            <span class="brand-text">冬瓜强<span class="brand-subtitle">积分站</span></span>
+          </a>
+
+          <nav class="nav" aria-label="主导航">
+            <button class="nav-link is-active" type="button" data-nav="home">首页</button>
+            <button class="nav-link" type="button" data-nav="points">瓜标值</button>
+            <button class="nav-link" type="button" data-nav="rank">弹幕排行</button>
+            <button class="nav-link" type="button" data-nav="store">igua 商店</button>
+          </nav>
+
+          <div class="topbar-side">
+            <span class="room-chip"><span class="room-dot" aria-hidden="true"></span>斗鱼 · 63136</span>
+            <button class="btn btn-primary btn-sm" type="button" data-nav="auth" data-auth-tab="login">登录 / 注册</button>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="打开菜单">
+              <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-nav" id="mobile-nav" hidden>
+          <button class="mobile-nav-link is-active" type="button" data-nav="home">首页</button>
+          <button class="mobile-nav-link" type="button" data-nav="points">瓜标值</button>
+          <button class="mobile-nav-link" type="button" data-nav="rank">弹幕排行</button>
+          <button class="mobile-nav-link" type="button" data-nav="store">igua 商店</button>
+          <button class="mobile-nav-link" type="button" data-nav="auth" data-auth-tab="login">登录 / 注册</button>
+          <a class="mobile-nav-link mobile-nav-live" href="https://www.douyu.com/63136" target="_blank" rel="noopener noreferrer">去直播间 ↗</a>
+        </div>
+      </header>
+
+      <p class="preview-banner">
+        <svg class="banner-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1.5 20.5h21L12 2Zm0 5.2 6.6 11.6H5.4L12 7.2Zm-.9 3.4v3.6h1.8v-3.6h-1.8Zm0 4.7v1.7h1.8v-1.7h-1.8Z"/></svg>
+        <span><strong>界面设计预览。</strong>页面中的账户、瓜标值、排行与商店均为<strong>示例数据</strong>，注册、登录、绑定、积分与兑换服务<strong>尚未接入</strong>，正式开放以站内公告为准。</span>
+      </p>
+
+      <main id="main">
+        <!-- ================= 首页 ================= -->
+        <section class="view is-active" id="view-home" data-view="home" aria-labelledby="home-title">
+          <div class="hero">
+            <div class="hero-copy">
+              <span class="status"><span class="status-dot" aria-hidden="true"></span>筹备中 · v0.2.0 设计预览</span>
+              <p class="eyebrow">冬瓜强直播间 · 椰汁糕冬瓜强</p>
+              <h1 id="home-title">每一份支持，<br />都有记录。</h1>
+              <p class="description">这是积分站的前台设计预览。账户注册、瓜标值、弹幕排行与 igua 商店的界面已先行呈现，业务功能仍在筹备，暂不接入真实数据。</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="https://www.douyu.com/63136" target="_blank" rel="noopener noreferrer">去直播间看看 <span aria-hidden="true">↗</span></a>
+                <button class="btn btn-ghost" type="button" data-nav="auth" data-auth-tab="register">查看注册界面</button>
+              </div>
+            </div>
+
+            <aside class="hero-card" aria-label="开放提醒">
+              <div class="hero-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m12 2 2.6 6.3 6.8.5-5.2 4.4 1.6 6.6L12 16.9 6.2 19.8l1.6-6.6L2.6 8.8l6.8-.5L12 2Z"/></svg>
+              </div>
+              <h2>欢迎来到积分站</h2>
+              <p>正式开放时间、瓜标值规则与兑换比例，请以后台配置和站内公告为准，前端不硬编码。</p>
+              <ul class="hero-card-list">
+                <li><span class="tick" aria-hidden="true">✓</span>独立新系统，积分从零开始</li>
+                <li><span class="tick" aria-hidden="true">✓</span>直播间识别码绑定后开户</li>
+                <li><span class="tick tick-mute" aria-hidden="true">○</span>注册 / 登录 · 尚未接入</li>
+              </ul>
+              <div class="hero-card-footer"><span class="notice-dot" aria-hidden="true"></span>暂未开放注册</div>
+            </aside>
+          </div>
+
+          <div class="section-head">
+            <h2>即将开放的功能</h2>
+            <p>下列模块界面已设计，功能待服务端接入后开放。</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg></div>
+              <h3>账户注册与绑定</h3>
+              <p>沿用直播间识别码绑定思路，绑定注册后达到送礼门槛方可开户。</p>
+              <button class="link-btn" type="button" data-nav="auth" data-auth-tab="register">查看界面 <span aria-hidden="true">→</span></button>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg></div>
+              <h3>瓜标值累计</h3>
+              <p>按送礼与互动累计瓜标值，明细可查，兑换比例由后台配置。</p>
+              <button class="link-btn" type="button" data-nav="points">查看界面 <span aria-hidden="true">→</span></button>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v10H8l-5 4V5Zm4 3v2h10V8H7Zm0 4v2h7v-2H7Z"/></svg></div>
+              <h3>弹幕排行</h3>
+              <p>礼物与弹幕按接收时间排序，去重后记分，呈现互动排行。</p>
+              <button class="link-btn" type="button" data-nav="rank">查看界面 <span aria-hidden="true">→</span></button>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h10l1 3H6l1-3Zm-2 5h14l-1 11H6L5 9Zm4 2v7h2v-7H9Zm4 0v7h2v-7h-2Z"/></svg></div>
+              <h3>igua 商店</h3>
+              <p>瓜标值兑换周边与权益的商店界面，下单与兑换尚未接入。</p>
+              <button class="link-btn" type="button" data-nav="store">查看界面 <span aria-hidden="true">→</span></button>
+            </article>
+          </div>
+
+          <div class="split">
+            <div class="panel">
+              <div class="section-head section-head-tight">
+                <h2>如何参与</h2>
+                <p>流程为规划说明，功能开放后以站内指引为准。</p>
+              </div>
+              <ol class="steps">
+                <li><span class="step-num">1</span><div><strong>获取识别码</strong><span>在直播间按指引获取专属识别码。</span></div></li>
+                <li><span class="step-num">2</span><div><strong>绑定并注册</strong><span>使用识别码绑定斗鱼账号，完成注册。</span></div></li>
+                <li><span class="step-num">3</span><div><strong>达到送礼门槛</strong><span>满足后台设置的单次/累计鱼翅门槛后开户。</span></div></li>
+                <li><span class="step-num">4</span><div><strong>累计瓜标值</strong><span>互动与送礼按比例转为瓜标值，可在商店兑换。</span></div></li>
+              </ol>
+            </div>
+
+            <div class="panel panel-room">
+              <div class="section-head section-head-tight">
+                <h2>房间信息</h2>
+                <p>基础信息，公开可见。</p>
+              </div>
+              <dl class="room-info">
+                <div><dt>主播</dt><dd>椰汁糕冬瓜强</dd></div>
+                <div><dt>平台</dt><dd>斗鱼直播</dd></div>
+                <div><dt>房间号</dt><dd class="mono">63136</dd></div>
+                <div><dt>系统状态</dt><dd><span class="pill pill-warn">筹备中</span></dd></div>
+              </dl>
+              <a class="btn btn-ghost btn-block" href="https://www.douyu.com/63136" target="_blank" rel="noopener noreferrer">进入直播间 <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
         </section>
-        <aside class="notice" aria-label="开放提醒">
-          <div class="notice-icon" aria-hidden="true">✦</div>
-          <h2>欢迎来到积分站</h2>
-          <p>正式开放时间和积分规则，请以站内后续公告为准。</p>
-          <div class="notice-footer"><span class="notice-dot" aria-hidden="true"></span>暂未开放注册</div>
-        </aside>
+
+        <!-- ================= 瓜标值 ================= -->
+        <section class="view" id="view-points" data-view="points" aria-labelledby="points-title" hidden>
+          <div class="section-head">
+            <h1 id="points-title">我的瓜标值</h1>
+            <p>账户与积分服务尚未接入，以下为界面与示例数据。</p>
+          </div>
+
+          <div class="points-layout">
+            <div class="balance-card">
+              <div class="balance-top">
+                <div class="avatar" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg>
+                </div>
+                <div>
+                  <p class="balance-name">未登录访客</p>
+                  <p class="balance-sub">绑定斗鱼账号后显示你的瓜标值</p>
+                </div>
+                <span class="pill pill-demo">示例</span>
+              </div>
+              <p class="balance-label">当前瓜标值（示例）</p>
+              <p class="balance-value"><span class="balance-unit">瓜</span> 0<span class="balance-placeholder">.00</span></p>
+              <div class="balance-actions">
+                <button class="btn btn-primary btn-sm" type="button" data-nav="auth" data-auth-tab="login">登录后查看</button>
+                <button class="btn btn-ghost btn-sm" type="button" data-demo="兑换功能尚未接入">去兑换</button>
+              </div>
+            </div>
+
+            <div class="stat-grid">
+              <div class="stat-card"><p class="stat-num">—</p><p class="stat-label">本月新增</p></div>
+              <div class="stat-card"><p class="stat-num">—</p><p class="stat-label">累计送礼门槛</p></div>
+              <div class="stat-card"><p class="stat-num">—</p><p class="stat-label">可兑换权益</p></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>瓜标值明细</h2>
+              <span class="pill pill-demo">示例数据</span>
+            </div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead><tr><th>时间</th><th>类型</th><th>说明</th><th class="num">变动</th><th class="num">余额</th></tr></thead>
+                <tbody>
+                  <tr><td class="mono">--:--</td><td><span class="tag tag-in">待接入</span></td><td>示例记录 · 送礼累计</td><td class="num pos">+0</td><td class="num mono">0</td></tr>
+                  <tr><td class="mono">--:--</td><td><span class="tag tag-out">待接入</span></td><td>示例记录 · 商店兑换</td><td class="num neg">-0</td><td class="num mono">0</td></tr>
+                  <tr><td class="mono">--:--</td><td><span class="tag tag-in">待接入</span></td><td>示例记录 · 弹幕互动</td><td class="num pos">+0</td><td class="num mono">0</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">真实明细将在积分服务接入、并由后台按比例记账后显示；前端不会伪造余额。</p>
+          </div>
+        </section>
+
+        <!-- ================= 弹幕排行 ================= -->
+        <section class="view" id="view-rank" data-view="rank" aria-labelledby="rank-title" hidden>
+          <div class="section-head">
+            <h1 id="rank-title">弹幕排行</h1>
+            <p>礼物与弹幕按接收时间排序、去重记分。榜单尚未接入真实数据。</p>
+          </div>
+
+          <div class="rank-tabs" role="tablist" aria-label="排行周期">
+            <button class="rank-tab is-active" type="button" role="tab" aria-selected="true" data-rank="day">日榜</button>
+            <button class="rank-tab" type="button" role="tab" aria-selected="false" data-rank="week">周榜</button>
+            <button class="rank-tab" type="button" role="tab" aria-selected="false" data-rank="total">总榜</button>
+            <span class="pill pill-demo rank-demo-flag">示例数据</span>
+          </div>
+
+          <div class="panel">
+            <div class="podium" aria-label="前三名（示例）">
+              <div class="podium-item podium-2"><span class="podium-rank">2</span><span class="podium-avatar" aria-hidden="true">瓜</span><span class="podium-name">示例用户 B</span><span class="podium-score mono">—</span></div>
+              <div class="podium-item podium-1"><span class="podium-rank">1</span><span class="podium-avatar" aria-hidden="true">冬</span><span class="podium-name">示例用户 A</span><span class="podium-score mono">—</span></div>
+              <div class="podium-item podium-3"><span class="podium-rank">3</span><span class="podium-avatar" aria-hidden="true">强</span><span class="podium-name">示例用户 C</span><span class="podium-score mono">—</span></div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="table">
+                <thead><tr><th class="rank-col">名次</th><th>用户</th><th class="num">弹幕数</th><th class="num">瓜标值</th></tr></thead>
+                <tbody data-rank-body>
+                  <tr><td class="rank-col mono">4</td><td>示例用户 D</td><td class="num mono">—</td><td class="num mono">—</td></tr>
+                  <tr><td class="rank-col mono">5</td><td>示例用户 E</td><td class="num mono">—</td><td class="num mono">—</td></tr>
+                  <tr><td class="rank-col mono">6</td><td>示例用户 F</td><td class="num mono">—</td><td class="num mono">—</td></tr>
+                  <tr><td class="rank-col mono">7</td><td>示例用户 G</td><td class="num mono">—</td><td class="num mono">—</td></tr>
+                  <tr><td class="rank-col mono">8</td><td>示例用户 H</td><td class="num mono">—</td><td class="num mono">—</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">榜单接入监听与去重记分后展示真实名次；当前所有数值以「—」占位，不伪造排名。</p>
+          </div>
+        </section>
+
+        <!-- ================= igua 商店 ================= -->
+        <section class="view" id="view-store" data-view="store" aria-labelledby="store-title" hidden>
+          <div class="section-head">
+            <h1 id="store-title">igua 商店</h1>
+            <p>使用瓜标值兑换周边与权益。兑换、下单与订单查询尚未接入。</p>
+          </div>
+
+          <div class="store-banner">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1.5 20.5h21L12 2Zm-.9 6.6v4.2h1.8V8.6h-1.8Zm0 5.6v1.9h1.8v-1.9h-1.8Z"/></svg>
+            <span>商店为浏览预览，<strong>尚未接入兑换、下单与订单查询</strong>；商品与所需瓜标值以后台配置为准。</span>
+          </div>
+
+          <div class="store-grid">
+            <article class="goods-card">
+              <div class="goods-thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h10l1 3H6l1-3Zm-2 5h14l-1 11H6L5 9Z"/></svg></div>
+              <div class="goods-body">
+                <span class="goods-tag">周边</span>
+                <h3>冬瓜强 应援徽章</h3>
+                <p class="goods-desc">示例商品 · 直播间主题金属徽章。</p>
+                <div class="goods-foot"><span class="goods-price"><span class="unit">瓜</span> ——</span><button class="btn btn-ghost btn-sm" type="button" data-demo="兑换功能尚未接入">兑换</button></div>
+              </div>
+            </article>
+            <article class="goods-card">
+              <div class="goods-thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4V6Zm2 2v8h12V8H6Zm2 2h8v2H8v-2Z"/></svg></div>
+              <div class="goods-body">
+                <span class="goods-tag">权益</span>
+                <h3>专属弹幕头衔</h3>
+                <p class="goods-desc">示例商品 · 站内展示的互动头衔。</p>
+                <div class="goods-foot"><span class="goods-price"><span class="unit">瓜</span> ——</span><button class="btn btn-ghost btn-sm" type="button" data-demo="兑换功能尚未接入">兑换</button></div>
+              </div>
+            </article>
+            <article class="goods-card">
+              <div class="goods-thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v6c0 4 3.4 7.4 8 8 4.6-.6 8-4 8-8V7l-8-4Zm0 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg></div>
+              <div class="goods-body">
+                <span class="goods-tag">周边</span>
+                <h3>限量应援毛巾</h3>
+                <p class="goods-desc">示例商品 · 直播间限定周边。</p>
+                <div class="goods-foot"><span class="goods-price"><span class="unit">瓜</span> ——</span><button class="btn btn-ghost btn-sm" type="button" data-demo="兑换功能尚未接入">兑换</button></div>
+              </div>
+            </article>
+            <article class="goods-card">
+              <div class="goods-thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5V4Zm2 3v2h10V7H7Zm0 4v2h10v-2H7Zm0 4v2h7v-2H7Z"/></svg></div>
+              <div class="goods-body">
+                <span class="goods-tag">权益</span>
+                <h3>点播券 ×1</h3>
+                <p class="goods-desc">示例商品 · 直播互动点播权益。</p>
+                <div class="goods-foot"><span class="goods-price"><span class="unit">瓜</span> ——</span><button class="btn btn-ghost btn-sm" type="button" data-demo="兑换功能尚未接入">兑换</button></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ================= 登录 / 注册 ================= -->
+        <section class="view" id="view-auth" data-view="auth" aria-labelledby="auth-title" hidden>
+          <div class="auth-wrap">
+            <div class="auth-aside" aria-hidden="true">
+              <div class="auth-aside-mark">冬</div>
+              <h2>冬瓜强积分站</h2>
+              <p>绑定直播间识别码，注册后达到送礼门槛即可开户，累计你的瓜标值。</p>
+              <ul class="auth-aside-list">
+                <li><span class="tick" aria-hidden="true">✓</span>独立新系统，积分从零开始</li>
+                <li><span class="tick" aria-hidden="true">✓</span>识别码绑定，去重记分</li>
+                <li><span class="tick" aria-hidden="true">✓</span>门槛与比例由后台配置</li>
+              </ul>
+            </div>
+
+            <div class="auth-panel">
+              <h1 id="auth-title" class="auth-title">账号</h1>
+              <div class="auth-tabs" role="tablist" aria-label="登录或注册">
+                <button class="auth-tab is-active" type="button" role="tab" aria-selected="true" data-auth-tab="login">登录</button>
+                <button class="auth-tab" type="button" role="tab" aria-selected="false" data-auth-tab="register">注册</button>
+              </div>
+
+              <div class="auth-form" data-auth-form="login">
+                <label class="field"><span class="field-label">斗鱼账号 / 识别码</span><input class="input" type="text" placeholder="示例：请输入账号" autocomplete="off" disabled /></label>
+                <label class="field"><span class="field-label">密码</span><input class="input" type="password" placeholder="示例：请输入密码" autocomplete="off" disabled /></label>
+                <button class="btn btn-primary btn-block" type="button" data-demo="登录服务尚未接入，正式开放时间以站内公告为准">登录</button>
+              </div>
+
+              <div class="auth-form" data-auth-form="register" hidden>
+                <label class="field"><span class="field-label">直播间识别码</span><input class="input" type="text" placeholder="示例：在直播间获取" autocomplete="off" disabled /></label>
+                <label class="field"><span class="field-label">斗鱼昵称</span><input class="input" type="text" placeholder="示例：用于绑定" autocomplete="off" disabled /></label>
+                <label class="field"><span class="field-label">设置密码</span><input class="input" type="password" placeholder="示例：请设置密码" autocomplete="off" disabled /></label>
+                <button class="btn btn-primary btn-block" type="button" data-demo="注册服务尚未接入，绑定注册后还须达到送礼门槛才能开户">注册并绑定</button>
+              </div>
+
+              <p class="auth-note" role="status" aria-live="polite" data-auth-note>账号服务尚未接入，此界面为设计预览，不会提交或保存任何信息。</p>
+              <p class="auth-legal">本页面不收集个人资料，无表单提交、无浏览器持久化。</p>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer><span>冬瓜强直播间积分站</span><span>谢谢你的陪伴</span></footer>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="brand-mark brand-mark-sm" aria-hidden="true">冬</span>
+            <div><strong>冬瓜强直播间积分站</strong><span class="footer-sub">前台设计预览 · v0.2.0</span></div>
+          </div>
+          <nav class="footer-nav" aria-label="页脚导航">
+            <button type="button" data-nav="home">首页</button>
+            <button type="button" data-nav="points">瓜标值</button>
+            <button type="button" data-nav="rank">弹幕排行</button>
+            <button type="button" data-nav="store">igua 商店</button>
+          </nav>
+          <p class="footer-note">谢谢你的陪伴 · 功能开放以站内公告为准</p>
+        </div>
+      </footer>
     </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
   </body>
 </html>
