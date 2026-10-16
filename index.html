@@ -8,8 +8,8 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://*.douyucdn.cn https://douyucdn.cn; font-src 'self'; connect-src https://apixixi.63136.icu; base-uri 'none'; form-action 'none'; object-src 'none'" />
     <link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon-yixing-64-rz_4wNdY.png" />
     <title>半亩瓜田</title>
-    <script type="module" crossorigin src="./assets/index-CSLH31Ub.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-zSLC5z_v.css">
+    <script type="module" crossorigin src="./assets/index-BAtVUpJw.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DF6FtVcq.css">
   </head>
   <body>
     <div class="app">
@@ -155,41 +155,33 @@
         <section class="view" id="view-rank" data-view="rank" aria-labelledby="rank-title" hidden>
           <div class="section-head reveal">
             <h1 id="rank-title" class="display">弹幕排行</h1>
-            <p>礼物与弹幕按接收时间排序、去重记分。榜单尚未接入真实数据。</p>
+            <p>每一句认真参与，都在瓜田留下足迹。按有效发言条数排名，与瓜标值独立。</p>
           </div>
-
           <div class="rank-tabs reveal" role="tablist" aria-label="排行周期">
             <button class="rank-tab is-active" type="button" role="tab" aria-selected="true" data-rank="day">日榜</button>
             <button class="rank-tab" type="button" role="tab" aria-selected="false" data-rank="week">周榜</button>
             <button class="rank-tab" type="button" role="tab" aria-selected="false" data-rank="total">总榜</button>
-            <span class="pill pill-demo rank-demo-flag">示例数据</span>
           </div>
-
-          <div class="podium-wrap reveal">
-            <div class="podium" aria-label="前三名（示例）">
-              <div class="podium-item reveal podium-2"><span class="podium-rank medal-sky">2</span><span class="podium-avatar" aria-hidden="true">瓜</span><span class="podium-name">示例用户 B</span><span class="podium-score mono">—</span></div>
-              <div class="podium-item reveal podium-1"><span class="podium-crown" aria-hidden="true"><svg viewBox="0 0 24 14"><path d="M2 12l1.6-7 4.2 3.4L12 2l4.2 6.4L20.4 5 22 12z"/></svg></span><span class="podium-rank medal-sun">1</span><span class="podium-avatar" aria-hidden="true">冬</span><span class="podium-name">示例用户 A</span><span class="podium-score mono">—</span></div>
-              <div class="podium-item reveal podium-3"><span class="podium-rank medal-heart">3</span><span class="podium-avatar" aria-hidden="true">强</span><span class="podium-name">示例用户 C</span><span class="podium-score mono">—</span></div>
+          <div class="danmu-tools reveal"><label data-rank-date-label>查看日期 <input type="date" data-rank-date aria-label="榜单日期"></label><button class="btn btn-outline btn-sm" type="button" data-danmu-refresh>刷新榜单</button></div>
+          <p class="danmu-status" data-rank-status role="status" aria-live="polite">正在读取榜单…</p>
+          <div class="podium-wrap reveal" data-danmu-podium hidden>
+            <div class="podium" aria-label="有效发言前三名">
+              <div class="podium-item podium-2" data-podium="2"><span class="podium-rank medal-sky">2</span><span class="podium-avatar" aria-hidden="true"></span><span class="podium-name"></span><span class="podium-score mono"></span></div>
+              <div class="podium-item podium-1" data-podium="1"><span class="podium-crown" aria-hidden="true"><svg viewBox="0 0 24 14"><path d="M2 12l1.6-7 4.2 3.4L12 2l4.2 6.4L20.4 5 22 12z"/></svg></span><span class="podium-rank medal-sun">1</span><span class="podium-avatar" aria-hidden="true"></span><span class="podium-name"></span><span class="podium-score mono"></span></div>
+              <div class="podium-item podium-3" data-podium="3"><span class="podium-rank medal-heart">3</span><span class="podium-avatar" aria-hidden="true"></span><span class="podium-name"></span><span class="podium-score mono"></span></div>
             </div>
             <svg class="podium-grass" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 34c180-24 360 18 560 10s380-26 560-12 240 20 320 8v20H0Z"/></svg>
           </div>
-
           <div class="aurora aurora-band reveal">
-            <svg class="aurora-mount" viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 90 30l60 34 70-52 80 56 60-30 40 26v26Z" class="mount-back"/><path d="M0 90 70 48l70 30 90-46 90 44 80-24v38Z" class="mount-front"/></svg>
-            <div class="table-wrap">
-              <table class="table table-glass">
-                <thead><tr><th class="rank-col">名次</th><th>用户</th><th class="num">弹幕数</th><th class="num">瓜标值</th></tr></thead>
-                <tbody data-rank-body>
-                  <tr><td class="rank-col mono">4</td><td>示例用户 D</td><td class="num mono">—</td><td class="num mono">—</td></tr>
-                  <tr><td class="rank-col mono">5</td><td>示例用户 E</td><td class="num mono">—</td><td class="num mono">—</td></tr>
-                  <tr><td class="rank-col mono">6</td><td>示例用户 F</td><td class="num mono">—</td><td class="num mono">—</td></tr>
-                  <tr><td class="rank-col mono">7</td><td>示例用户 G</td><td class="num mono">—</td><td class="num mono">—</td></tr>
-                  <tr><td class="rank-col mono">8</td><td>示例用户 H</td><td class="num mono">—</td><td class="num mono">—</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="table-note on-aurora-sub">榜单接入监听与去重记分后展示真实名次；当前所有数值以「—」占位，不伪造排名。</p>
+            <div class="table-wrap"><table class="table table-glass"><thead><tr><th class="rank-col">名次</th><th>观众</th><th class="num">有效弹幕条数</th></tr></thead><tbody data-rank-body></tbody></table></div>
+            <div class="danmu-pagination"><button type="button" class="btn btn-outline btn-sm" data-rank-prev disabled>上一页</button><span data-rank-page>第 1 页</span><button type="button" class="btn btn-outline btn-sm" data-rank-next disabled>下一页</button></div>
+            <p class="table-note on-aurora-sub">北京时间每日零点换日，周一零点换周。仅累计开始采集后的记录；同条数按固定顺序展示。</p>
           </div>
+          <section class="daily-wordcloud reveal" aria-labelledby="cloud-title">
+            <div class="cloud-heading"><div><span class="eyebrow">TODAY IN CHAT</span><h2 id="cloud-title">瓜田今日热词</h2><p>看看大家今天都在聊什么。</p></div><label>选择日期 <input type="date" data-cloud-date aria-label="词云日期"></label></div>
+            <p data-cloud-status class="danmu-status" role="status" aria-live="polite">正在读取词云…</p>
+            <div class="wordcloud-canvas" data-wordcloud></div>
+          </section>
         </section>
 
         <!-- igua 商店暂时隐藏：入口均加 hidden，路由从 VIEWS 移除；恢复时需同步两处。 -->
@@ -318,7 +310,7 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <img class="brand-mark brand-mark-sm" src="./assets/logo-yixing-320-CCQXgbi0.webp" width="320" height="273" loading="lazy" decoding="async" alt="" />
-            <div><strong>半亩瓜田</strong><span class="footer-sub">账号服务 v0.8.0</span></div>
+            <div><strong>半亩瓜田</strong><span class="footer-sub">站点 v0.9.0</span></div>
           </div>
           <nav class="footer-nav" aria-label="页脚导航">
             <button type="button" data-nav="home">首页</button>
