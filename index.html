@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="半亩瓜田 · 积分前台设计预览：首页、瓜标值、弹幕排行、igua 商店与账号界面，功能筹备中，页面为示例数据。" />
+    <meta name="description" content="半亩瓜田 · 积分前台设计预览：首页、瓜标值、弹幕排行与账号界面，功能筹备中，页面为示例数据。" />
     <meta name="color-scheme" content="light" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://apixixi.63136.icu; base-uri 'none'; form-action 'none'; object-src 'none'" />
     <link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon-yixing-64-rz_4wNdY.png" />
     <title>半亩瓜田</title>
-    <script type="module" crossorigin src="./assets/index-DXFVP4BY.js"></script>
+    <script type="module" crossorigin src="./assets/index-DRXd-oI6.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-Bhkp2dDm.css">
   </head>
   <body>
@@ -32,7 +32,7 @@
             <button class="nav-link is-active" type="button" data-nav="home">首页</button>
             <button class="nav-link" type="button" data-nav="points">瓜标值</button>
             <button class="nav-link" type="button" data-nav="rank">弹幕排行</button>
-            <button class="nav-link" type="button" data-nav="store">igua 商店</button>
+            <button class="nav-link" type="button" data-nav="store" hidden>igua 商店</button>
           </nav>
 
           <div class="topbar-side">
@@ -48,7 +48,7 @@
           <button class="mobile-nav-link is-active" type="button" data-nav="home">首页</button>
           <button class="mobile-nav-link" type="button" data-nav="points">瓜标值</button>
           <button class="mobile-nav-link" type="button" data-nav="rank">弹幕排行</button>
-          <button class="mobile-nav-link" type="button" data-nav="store">igua 商店</button>
+          <button class="mobile-nav-link" type="button" data-nav="store" hidden>igua 商店</button>
           <button class="mobile-nav-link" type="button" data-nav="auth" data-auth-tab="login">登录 / 注册</button>
           <a class="mobile-nav-link mobile-nav-live" href="https://www.douyu.com/63136" target="_blank" rel="noopener noreferrer">去直播间 ↗</a>
         </div>
@@ -196,7 +196,7 @@
           </div>
         </section>
 
-        <!-- ================= igua 商店 ================= -->
+        <!-- igua 商店暂时隐藏：入口均加 hidden，路由从 VIEWS 移除；恢复时需同步两处。 -->
         <section class="view" id="view-store" data-view="store" aria-labelledby="store-title" hidden>
           <div class="section-head reveal">
             <h1 id="store-title" class="display">igua 商店</h1>
@@ -295,13 +295,13 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <img class="brand-mark brand-mark-sm" src="./assets/logo-yixing-320-CCQXgbi0.webp" width="320" height="273" loading="lazy" decoding="async" alt="" />
-            <div><strong>半亩瓜田</strong><span class="footer-sub">前台设计预览 v0.4.8</span></div>
+            <div><strong>半亩瓜田</strong><span class="footer-sub">前台设计预览 v0.4.9</span></div>
           </div>
           <nav class="footer-nav" aria-label="页脚导航">
             <button type="button" data-nav="home">首页</button>
             <button type="button" data-nav="points">瓜标值</button>
             <button type="button" data-nav="rank">弹幕排行</button>
-            <button type="button" data-nav="store">igua 商店</button>
+            <button type="button" data-nav="store" hidden>igua 商店</button>
           </nav>
           <p class="footer-note">谢谢你的陪伴 · 功能开放以站内公告为准</p>
         </div>
