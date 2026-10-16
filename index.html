@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="半亩瓜田 · 绑定斗鱼账号、注册与登录，查询个人账号与瓜标值。榜单目前为示例展示。" />
+    <meta name="description" content="半亩瓜田 · 绑定斗鱼账号、注册与登录，查询个人账号与瓜标值。查询已注册用户的真实瓜标值榜单。" />
     <meta name="color-scheme" content="light" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://apixixi.63136.icu; base-uri 'none'; form-action 'none'; object-src 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://*.douyucdn.cn https://douyucdn.cn; font-src 'self'; connect-src https://apixixi.63136.icu; base-uri 'none'; form-action 'none'; object-src 'none'" />
     <link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon-yixing-64-rz_4wNdY.png" />
     <title>半亩瓜田</title>
-    <script type="module" crossorigin src="./assets/index-BbfcBd8P.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-D41xylW4.css">
+    <script type="module" crossorigin src="./assets/index-CSLH31Ub.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-zSLC5z_v.css">
   </head>
   <body>
     <div class="app">
@@ -85,63 +85,59 @@
             <svg class="aurora-mount" viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 90 30l60 34 70-52 80 56 60-30 40 26v26Z" class="mount-back"/><path d="M0 90 70 48l70 30 90-46 90 44 80-24v38Z" class="mount-front"/></svg>
             <div class="section-head reveal">
               <h1 id="points-title" class="display on-aurora">我的瓜标值</h1>
-              <p class="on-aurora-sub">账户与积分服务尚未接入，以下为界面与示例数据。</p>
+              <p class="on-aurora-sub">注册后的合格礼物和签到计入瓜标值；余额与明细以真实账本为准。</p>
             </div>
 
             <div class="points-layout">
               <div class="glass glass-balance reveal">
                 <div class="balance-top">
-                  <div class="avatar" aria-hidden="true">
+                  <div class="avatar profile-avatar" data-points-avatar>
                     <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg>
                   </div>
                   <div>
-                    <p class="balance-name">未登录访客</p>
-                    <p class="balance-sub">绑定斗鱼账号后显示你的瓜标值</p>
+                    <p class="balance-name" data-points-name>未登录访客</p>
+                    <p class="balance-sub" data-points-identity>登录后查看本人资料</p>
                   </div>
-                  <span class="pill pill-glass">示例</span>
+                  <span class="pill pill-glass" data-points-status>未登录</span>
                 </div>
-                <p class="balance-label">当前瓜标值（示例）</p>
-                <p class="balance-value"><span class="balance-unit">瓜</span> 0<span class="balance-placeholder">.00</span></p>
+                <p class="balance-label">当前瓜标值</p>
+                <p class="balance-value"><span class="balance-unit">瓜</span> <span data-points-balance>—</span></p>
                 <div class="balance-actions">
-                  <button class="btn btn-white btn-sm" type="button" data-nav="auth" data-auth-tab="login">登录后查看</button>
-                  <button class="btn btn-glass btn-sm" type="button" data-demo="兑换功能尚未接入">去兑换</button>
+                  <button class="btn btn-white btn-sm" type="button" data-nav="auth" data-auth-tab="login" data-points-login>登录后查看</button>
+                  <button class="btn btn-glass btn-sm" type="button" data-points-refresh>刷新数据</button>
                 </div>
               </div>
 
               <div class="stat-grid">
-                <div class="glass glass-tile reveal"><p class="stat-num">—</p><p class="stat-label">本月新增</p></div>
-                <div class="glass glass-tile reveal"><p class="stat-num">—</p><p class="stat-label">累计送礼门槛</p></div>
-                <div class="glass glass-tile reveal"><p class="stat-num">—</p><p class="stat-label">可兑换权益</p></div>
+                <div class="glass glass-tile reveal"><p class="stat-num" data-points-fish>—</p><p class="stat-label">累计计分鱼翅</p></div>
+                <div class="glass glass-tile reveal"><p class="stat-num" data-points-level>—</p><p class="stat-label">斗鱼等级</p></div>
+                <div class="glass glass-tile reveal"><p class="stat-num" data-points-badge>—</p><p class="stat-label">冬瓜强粉丝牌等级</p></div>
               </div>
             </div>
 
             <div class="glass reveal">
               <div class="panel-head">
                 <h2 class="on-aurora">瓜标值明细</h2>
-                <span class="pill pill-glass">示例数据</span>
+                <span class="pill pill-glass">真实账本</span>
               </div>
               <div class="table-wrap">
                 <table class="table table-glass">
                   <thead><tr><th>时间</th><th>类型</th><th>说明</th><th class="num">变动</th><th class="num">余额</th></tr></thead>
-                  <tbody>
-                    <tr><td class="mono">--:--</td><td><span class="tag tag-in">待接入</span></td><td>示例记录 · 送礼累计</td><td class="num pos">+0</td><td class="num mono">0</td></tr>
-                    <tr><td class="mono">--:--</td><td><span class="tag tag-out">待接入</span></td><td>示例记录 · 商店兑换</td><td class="num neg">-0</td><td class="num mono">0</td></tr>
-                    <tr><td class="mono">--:--</td><td><span class="tag tag-in">待接入</span></td><td>示例记录 · 弹幕互动</td><td class="num pos">+0</td><td class="num mono">0</td></tr>
-                  </tbody>
+                  <tbody data-points-ledger><tr><td colspan="5">登录后查看本人真实积分明细</td></tr></tbody>
                 </table>
               </div>
-              <p class="table-note on-aurora-sub">真实明细将在积分服务接入、并由后台按比例记账后显示；前端不会伪造余额。</p>
+              <p class="table-note on-aurora-sub" role="status" data-points-note>登录后查看本人明细</p><div class="board-pagination"><button class="btn btn-glass btn-sm" type="button" data-ledger-prev disabled>上一页</button><span data-ledger-page></span><button class="btn btn-glass btn-sm" type="button" data-ledger-next disabled>下一页</button></div>
             </div>
 
             <div class="glass reveal">
               <div class="panel-head">
                 <h2 class="on-aurora">全站瓜标值</h2>
-                <span class="pill pill-glass">示例数据</span>
+                <span class="pill pill-glass">仅已注册用户</span>
               </div>
               <div class="board-tools">
                 <label class="search">
                   <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.6 15.6 4.9 4.9" stroke-linecap="round"/></svg>
-                  <input class="input input-glass" type="search" placeholder="搜索用户昵称" aria-label="搜索用户昵称" autocomplete="off" data-board-search />
+                  <input class="input input-glass" type="search" placeholder="搜索昵称或斗鱼UID" aria-label="搜索昵称或斗鱼UID" maxlength="100" autocomplete="off" data-board-search />
                 </label>
                 <div class="sort-group" role="group" aria-label="排序方式">
                   <button class="sort-key is-active" type="button" data-sort-key="value" aria-pressed="true">瓜标值</button>
@@ -150,7 +146,7 @@
                 </div>
               </div>
               <div class="board-grid" data-board-grid></div>
-              <p class="table-note on-aurora-sub" data-board-note>示例用户与示例数值，仅演示搜索与正反排序；接入后以权威账本为准。</p>
+              <p class="table-note on-aurora-sub" role="status" data-board-note>正在等待读取真实榜单</p><div class="board-pagination"><button class="btn btn-glass btn-sm" type="button" data-board-prev disabled>上一页</button><span data-board-page></span><button class="btn btn-glass btn-sm" type="button" data-board-next disabled>下一页</button></div>
             </div>
           </div>
         </section>
@@ -284,7 +280,7 @@
                   <strong class="binding-code mono" data-binding-code></strong>
                   <div class="binding-actions"><span data-binding-time></span><button class="btn btn-white btn-sm" type="button" data-copy-code>复制识别码</button></div>
                 </div>
-                <div class="binding-identity" data-binding-identity hidden><strong data-binding-nickname></strong><span class="auth-help">斗鱼 UID：<span data-binding-uid></span><br /><span data-binding-badge></span></span></div>
+                <div class="binding-identity" data-binding-identity hidden><span class="profile-avatar" data-binding-avatar></span><strong data-binding-nickname></strong><span class="auth-help">斗鱼 UID：<span data-binding-uid></span><br />斗鱼等级：<span data-binding-level></span><br /><span data-binding-badge></span></span></div>
                 <form class="auth-form" data-register hidden>
                   <label class="identity-check"><input type="checkbox" name="confirmIdentity" required /><span>我确认以上斗鱼账号是我本人。若不是，请重新生成识别码。</span></label>
                   <label class="field"><span class="field-label">设置网站用户名</span><input class="input" name="username" type="text" placeholder="2–20 位中文、字母或数字" autocomplete="username" minlength="2" maxlength="20" required /></label>
@@ -295,8 +291,8 @@
               </div>
 
               <div class="auth-form" data-account hidden>
-                <div class="account-heading"><h2 data-account-name></h2><span class="pill" data-account-state></span></div>
-                <p class="auth-help">最近观察昵称：<strong data-account-nickname></strong><br />斗鱼 UID：<span data-account-uid></span></p>
+                <div class="account-heading"><span class="profile-avatar" data-account-avatar></span><h2 data-account-name></h2><span class="pill" data-account-state></span></div>
+                <p class="auth-help">最近观察昵称：<strong data-account-nickname></strong><br />斗鱼 UID：<span data-account-uid></span><br />斗鱼等级：<span data-account-level></span><br />冬瓜强粉丝牌：<span data-account-badge></span></p><p class="auth-help">资料来自发码验证及最近收到的礼物、签到；未佩戴本直播间粉丝牌的消息不会覆盖已有粉丝牌资料。</p>
                 <div class="binding-info"><span class="field-label">我的瓜标值 · 当前账户余额</span><strong class="account-balance mono" data-account-balance></strong><span class="auth-help">累计计分鱼翅：<span data-account-progress></span></span></div>
                 <section class="checkin-card" data-checkin aria-label="每日签到">
                   <div class="account-heading"><h3>每日签到</h3><button class="btn btn-white btn-sm" type="button" data-checkin-refresh>刷新签到</button></div>
@@ -322,7 +318,7 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <img class="brand-mark brand-mark-sm" src="./assets/logo-yixing-320-CCQXgbi0.webp" width="320" height="273" loading="lazy" decoding="async" alt="" />
-            <div><strong>半亩瓜田</strong><span class="footer-sub">账号服务 v0.7.0</span></div>
+            <div><strong>半亩瓜田</strong><span class="footer-sub">账号服务 v0.8.0</span></div>
           </div>
           <nav class="footer-nav" aria-label="页脚导航">
             <button type="button" data-nav="home">首页</button>
