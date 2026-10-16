@@ -1,5 +1,5 @@
 {
-  "version": "0.10.9",
-  "sourceCommit": "8fc2c6179b71b8173748306dcdae4d944bf30315",
-  "stage": "balance-number-only"
+  "version": "0.11.0",
+  "sourceCommit": "ea4b7b6e2c330a2e2686e35c80f8620dbe5fce99",
+  "stage": "rank-full-names-and-rows"
 }
