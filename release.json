@@ -1,5 +1,5 @@
 {
-  "version": "0.10.5",
-  "sourceCommit": "18c6869e180e3590c1549fb1f395c5fed3956ce6",
-  "stage": "mixed-binding-code"
+  "version": "0.10.6",
+  "sourceCommit": "2b6fc70968e3e7b5579f1a8cc1b524409fc338c2",
+  "stage": "compact-avatars"
 }
