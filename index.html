@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="半亩瓜田 · 积分前台设计预览：首页、瓜标值、弹幕排行与账号界面，功能筹备中，页面为示例数据。" />
+    <meta name="description" content="半亩瓜田 · 绑定斗鱼账号、注册与登录，查询个人开户状态与瓜标值。榜单目前为示例展示。" />
     <meta name="color-scheme" content="light" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://apixixi.63136.icu; base-uri 'none'; form-action 'none'; object-src 'none'" />
     <link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon-yixing-64-rz_4wNdY.png" />
     <title>半亩瓜田</title>
-    <script type="module" crossorigin src="./assets/index-DLA1-qc9.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BVOaoRmh.css">
+    <script type="module" crossorigin src="./assets/index-DP-iTRL7.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BnUuaLK8.css">
   </head>
   <body>
     <div class="app">
@@ -37,7 +37,7 @@
 
           <div class="topbar-side">
             <span class="room-chip"><span class="room-dot" aria-hidden="true"></span>斗鱼 · 63136</span>
-            <button class="btn btn-dark btn-sm" type="button" data-nav="auth" data-auth-tab="login">登录 / 注册</button>
+            <button class="btn btn-dark btn-sm" type="button" data-nav="auth" data-auth-tab="login" data-account-nav>登录 / 注册</button>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="打开菜单">
               <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
             </button>
@@ -49,7 +49,7 @@
           <button class="mobile-nav-link" type="button" data-nav="points">瓜标值</button>
           <button class="mobile-nav-link" type="button" data-nav="rank">弹幕排行</button>
           <button class="mobile-nav-link" type="button" data-nav="store" hidden>igua 商店</button>
-          <button class="mobile-nav-link" type="button" data-nav="auth" data-auth-tab="login">登录 / 注册</button>
+          <button class="mobile-nav-link" type="button" data-nav="auth" data-auth-tab="login" data-account-nav>登录 / 注册</button>
           <a class="mobile-nav-link mobile-nav-live" href="https://www.douyu.com/63136" target="_blank" rel="noopener noreferrer">去直播间 ↗</a>
         </div>
       </header>
@@ -270,21 +270,40 @@
                 <button class="auth-tab" type="button" role="tab" aria-selected="false" data-auth-tab="register">注册</button>
               </div>
 
-              <div class="auth-form" data-auth-form="login">
-                <label class="field"><span class="field-label">斗鱼账号 / 识别码</span><input class="input" type="text" placeholder="示例：请输入账号" autocomplete="off" disabled /></label>
-                <label class="field"><span class="field-label">密码</span><input class="input" type="password" placeholder="示例：请输入密码" autocomplete="off" disabled /></label>
-                <button class="btn btn-dark btn-block" type="button" data-demo="登录服务尚未接入，正式开放时间以站内公告为准">登录</button>
-              </div>
+              <form class="auth-form" data-auth-form="login">
+                <label class="field"><span class="field-label">网站用户名</span><input class="input" name="username" type="text" placeholder="注册时设置的用户名" autocomplete="username" maxlength="20" required /></label>
+                <label class="field"><span class="field-label">网站密码</span><input class="input" name="password" type="password" placeholder="请输入网站密码，不是斗鱼密码" autocomplete="current-password" maxlength="64" required /></label>
+                <button class="btn btn-dark btn-block" type="submit">登录</button>
+              </form>
 
               <div class="auth-form" data-auth-form="register" hidden>
-                <label class="field"><span class="field-label">直播间识别码</span><input class="input" type="text" placeholder="示例：在直播间获取" autocomplete="off" disabled /></label>
-                <label class="field"><span class="field-label">斗鱼昵称</span><input class="input" type="text" placeholder="示例：用于绑定" autocomplete="off" disabled /></label>
-                <label class="field"><span class="field-label">设置密码</span><input class="input" type="password" placeholder="示例：请设置密码" autocomplete="off" disabled /></label>
-                <button class="btn btn-dark btn-block" type="button" data-demo="注册服务尚未接入，绑定注册后还须达到送礼门槛才能开户">注册并绑定</button>
+                <p class="auth-help">1. 生成识别码，用自己的斗鱼账号到 <a href="https://www.douyu.com/63136" target="_blank" rel="noopener noreferrer">63136 直播间 ↗</a> 发送这六位数字。<br />2. 确认识别到的身份，再设置网站用户名和密码。</p>
+                <button class="btn btn-dark btn-block" type="button" data-create-binding>生成识别码</button>
+                <div class="binding-info" data-binding-info hidden>
+                  <span class="field-label">直播间识别码 · 两分钟有效</span>
+                  <strong class="binding-code mono" data-binding-code></strong>
+                  <div class="binding-actions"><span data-binding-time></span><button class="btn btn-white btn-sm" type="button" data-copy-code>复制识别码</button></div>
+                </div>
+                <form class="auth-form" data-register hidden>
+                  <div class="binding-identity"><strong data-binding-nickname></strong><span class="auth-help">斗鱼 UID：<span data-binding-uid></span></span></div>
+                  <label class="identity-check"><input type="checkbox" name="confirmIdentity" required /><span>我确认以上斗鱼账号是我本人。若不是，请重新生成识别码。</span></label>
+                  <label class="field"><span class="field-label">设置网站用户名</span><input class="input" name="username" type="text" placeholder="2–20 位中文、字母或数字" autocomplete="username" minlength="2" maxlength="20" required /></label>
+                  <label class="field"><span class="field-label">设置网站密码</span><input class="input" name="password" type="password" placeholder="8–64 位，含字母和数字，不含空格" autocomplete="new-password" minlength="8" maxlength="64" required /></label>
+                  <label class="field"><span class="field-label">再次输入密码</span><input class="input" name="passwordConfirm" type="password" placeholder="再次输入网站密码" autocomplete="new-password" minlength="8" maxlength="64" required /></label>
+                  <button class="btn btn-dark btn-block" type="submit" data-register-submit disabled>确认绑定并注册</button>
+                </form>
               </div>
 
-              <p class="auth-note" role="status" aria-live="polite" data-auth-note>账号服务尚未接入，此界面为设计预览，不会提交或保存任何信息。</p>
-              <p class="auth-legal">本页面不收集个人资料，无表单提交、无浏览器持久化。</p>
+              <div class="auth-form" data-account hidden>
+                <div class="account-heading"><h2 data-account-name></h2><span class="pill" data-account-state></span></div>
+                <p class="auth-help">绑定昵称：<strong data-account-nickname></strong><br />斗鱼 UID：<span data-account-uid></span></p>
+                <div class="binding-info"><span class="field-label">我的瓜标值 · 当前账户余额</span><strong class="account-balance mono" data-account-balance></strong><span class="auth-help">开户累计有效鱼翅：<span data-account-progress></span></span></div>
+                <button class="btn btn-white btn-block" type="button" data-logout>退出登录</button>
+              </div>
+              <p class="auth-note" role="status" aria-live="polite" data-auth-note>正在读取登录状态…</p>
+              <button class="btn btn-white btn-sm account-refresh" type="button" data-refresh-account>刷新登录状态</button>
+              <p class="auth-help account-rules" data-account-rules>正在读取计分规则…</p>
+              <p class="auth-legal">登录状态在此浏览器最多保留 90 天；公共设备用完请退出。请勿使用斗鱼账号密码注册本网站。</p>
             </div>
           </div>
         </section>
@@ -295,7 +314,7 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <img class="brand-mark brand-mark-sm" src="./assets/logo-yixing-320-CCQXgbi0.webp" width="320" height="273" loading="lazy" decoding="async" alt="" />
-            <div><strong>半亩瓜田</strong><span class="footer-sub">前台设计预览 v0.4.12</span></div>
+            <div><strong>半亩瓜田</strong><span class="footer-sub">账号服务 v0.5.0</span></div>
           </div>
           <nav class="footer-nav" aria-label="页脚导航">
             <button type="button" data-nav="home">首页</button>
