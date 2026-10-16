@@ -1,5 +1,5 @@
 {
-  "version": "0.10.7",
-  "sourceCommit": "960e09c35e20b0ec00e3376af5b80ef3a7525264",
-  "stage": "compact-avatars"
+  "version": "0.10.8",
+  "sourceCommit": "71ae1fb6bd91fd2350ad19dbe276beb7e4928b04",
+  "stage": "private-viewer-uids"
 }
