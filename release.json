@@ -1,5 +1,5 @@
 {
-  "version": "0.23.1",
-  "sourceCommit": "cf616262e79d6b7d6aafa41b770f2e018f3c8470",
-  "stage": "authenticated-community"
+  "version": "0.24.0",
+  "sourceCommit": "b8c27488af25357c407a62305da6b93b0d27b94d",
+  "stage": "anchor-ratings"
 }

@@ -8,8 +8,8 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https://*.douyucdn.cn https://douyucdn.cn; font-src 'self'; connect-src https://apixixi.63136.icu https://chatxixi.63136.icu; base-uri 'none'; form-action 'none'; object-src 'none'" />
     <link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon-yixing-64-rz_4wNdY.png" />
     <title>半亩瓜田</title>
-    <script type="module" crossorigin src="./assets/index-CuHkJFG-.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CR1zL-nk.css">
+    <script type="module" crossorigin src="./assets/index-u6FKptvc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-2D4kMnQy.css">
   </head>
   <body>
     <div class="app">
@@ -32,6 +32,7 @@
             <button class="nav-link is-active" type="button" data-nav="home">首页</button>
             <button class="nav-link" type="button" data-nav="points">瓜标值</button>
             <button class="nav-link" type="button" data-nav="rank">弹幕排行</button>
+            <button class="nav-link" type="button" data-nav="anchors">主播能力榜</button>
             <button class="nav-link" type="button" data-nav="community" data-community-nav hidden>呱唧呱唧</button>
             <button class="nav-link" type="button" data-nav="store" hidden>igua 商店</button>
           </nav>
@@ -49,6 +50,7 @@
           <button class="mobile-nav-link is-active" type="button" data-nav="home">首页</button>
           <button class="mobile-nav-link" type="button" data-nav="points">瓜标值</button>
           <button class="mobile-nav-link" type="button" data-nav="rank">弹幕排行</button>
+          <button class="mobile-nav-link" type="button" data-nav="anchors">主播能力榜</button>
           <button class="mobile-nav-link" type="button" data-nav="community" data-community-nav hidden>呱唧呱唧</button>
           <button class="mobile-nav-link" type="button" data-nav="store" hidden>igua 商店</button>
           <button class="mobile-nav-link" type="button" data-nav="auth" data-auth-tab="login" data-account-nav>登录 / 注册</button>
@@ -203,6 +205,16 @@
         </section>
 
         <!-- igua 商店暂时隐藏：入口均加 hidden，路由从 VIEWS 移除；恢复时需同步两处。 -->
+        <section class="view anchor-page" id="view-anchors" data-view="anchors" aria-labelledby="anchors-title" hidden>
+          <div class="anchor-page-heading"><div><p class="eyebrow">瓜田人物册 · 观众一起打分</p><h1 id="anchors-title" class="display">主播能力榜</h1><p>六个角度，画出你眼中的TA。每位主播一份评分，之后随时修改。</p></div><button class="btn btn-outline btn-sm" type="button" data-anchor-refresh>刷新榜单</button></div>
+          <div class="anchor-toolbar"><label>搜索<input type="search" data-anchor-search placeholder="昵称 / 房间号" maxlength="100"></label><label>分类<select data-anchor-category><option value="">全部分类</option></select></label><label>我的评分<select data-anchor-filter><option value="">全部主播</option><option value="rated">我已评分</option><option value="unrated">我未评分</option></select></label><label>排序<select data-anchor-sort><option value="overall">综合能力</option><option value="default">后台顺序</option><option value="votes">评分人数</option></select></label></div>
+          <p class="anchor-status" data-anchor-status role="status" aria-live="polite">进入后读取主播能力。</p>
+          <div class="anchor-grid" data-anchor-grid></div>
+          <div class="anchor-pagination"><button type="button" class="btn btn-outline btn-sm" data-anchor-prev disabled>上一页</button><span data-anchor-page>第1页</span><button type="button" class="btn btn-outline btn-sm" data-anchor-next disabled>下一页</button></div>
+          <p class="anchor-footnote">观众主观评分，仅供娱乐参考。六项按有效评分的平均值换算至0–100；评分人数为独立用户数。评分不产生结石币。</p>
+          <dialog class="anchor-dialog" aria-labelledby="anchor-dialog-title"><form><h2 id="anchor-dialog-title" data-anchor-dialog-title>为TA评分</h2><p>每项0–10分，六项全部填写。修改会替换你的上一份评分。</p><div class="anchor-fields" data-anchor-fields></div><p class="anchor-submit-status" data-anchor-submit-status role="status" aria-live="polite"></p><div class="anchor-dialog-actions"><button class="btn btn-outline btn-sm" type="button" data-anchor-close>取消</button><button class="btn btn-dark btn-sm" type="submit">保存我的评分</button></div></form></dialog>
+        </section>
+
         <section class="view" id="view-store" data-view="store" aria-labelledby="store-title" hidden>
           <div class="section-head reveal">
             <h1 id="store-title" class="display">igua 商店</h1>
