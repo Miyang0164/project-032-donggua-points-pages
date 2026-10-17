@@ -1,5 +1,5 @@
 {
-  "version": "0.17.1",
-  "sourceCommit": "8a8e2df56675759441b4bd39dcbc8b25703aa4e4",
-  "stage": "compact-viewer-ledger"
+  "version": "0.17.2",
+  "sourceCommit": "dc552c618a3a8aaf24df14a765437fff5c1de808",
+  "stage": "full-board-names"
 }
