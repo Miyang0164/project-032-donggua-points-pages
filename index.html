@@ -8,8 +8,8 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https://*.douyucdn.cn https://douyucdn.cn; font-src 'self'; connect-src https://apixixi.63136.icu https://chatxixi.63136.icu; base-uri 'none'; form-action 'none'; object-src 'none'" />
     <link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon-yixing-64-rz_4wNdY.png" />
     <title>半亩瓜田</title>
-    <script type="module" crossorigin src="./assets/index-BCqaKBiH.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DEOfkLV2.css">
+    <script type="module" crossorigin src="./assets/index-CuHkJFG-.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CR1zL-nk.css">
   </head>
   <body>
     <div class="app">
@@ -110,6 +110,7 @@
                   <p class="balance-label">当前瓜标值</p>
                   <p class="balance-value"><span data-points-balance>—</span></p>
                 </div>
+                <section class="balance-trend" aria-label="最近30天瓜标值余额变化"><h2>最近30天 · 余额变化</h2><div data-balance-trend><p class="trend-empty">登录后查看最近30天余额变化</p></div></section>
                 <div class="balance-actions">
                   <button class="btn btn-white btn-sm" type="button" data-nav="auth" data-auth-tab="login" data-points-login>登录后查看</button>
                   <button class="btn btn-glass btn-sm" type="button" data-points-retry hidden>重试</button>
@@ -127,9 +128,21 @@
             <details class="glass points-ledger reveal">
               <summary><span>我的瓜标值明细</span><span class="ledger-toggle"><span class="ledger-closed">展开</span><span class="ledger-open">收起</span><span class="ledger-chevron" aria-hidden="true">⌄</span></span></summary>
               <div class="ledger-content">
-              <p class="ledger-caption">正数为增加，负数为扣减；更多明细可在列表内上下滚动查看。</p>
-              <ol class="ledger-list" tabindex="0" aria-label="我的瓜标值变动明细，可上下滚动查看" data-points-ledger><li class="ledger-empty">登录后查看本人真实积分明细</li></ol>
-              <p class="table-note on-aurora-sub" role="status" data-points-note>登录后查看本人明细</p><div class="board-pagination"><button class="btn btn-glass btn-sm" type="button" data-ledger-prev disabled>上一页</button><span data-ledger-page></span><button class="btn btn-glass btn-sm" type="button" data-ledger-next disabled>下一页</button></div>
+              <p class="ledger-caption">左侧加分，右侧扣分；两边可分别翻页，更多记录可在列表内上下滚动查看。</p>
+              <div class="ledger-columns">
+                <section class="ledger-column ledger-credit" aria-labelledby="ledger-credit-title">
+                  <h2 id="ledger-credit-title">加分记录</h2>
+                  <ol class="ledger-list" tabindex="0" aria-label="我的瓜标值加分记录，可上下滚动查看" data-points-ledger-credit><li class="ledger-empty">登录后查看本人明细</li></ol>
+                  <p class="table-note" role="status" data-ledger-credit-note>登录后查看本人明细</p>
+                  <div class="board-pagination"><button class="btn btn-glass btn-sm" type="button" data-ledger-credit-prev disabled>上一页</button><span data-ledger-credit-page></span><button class="btn btn-glass btn-sm" type="button" data-ledger-credit-next disabled>下一页</button></div>
+                </section>
+                <section class="ledger-column ledger-debit" aria-labelledby="ledger-debit-title">
+                  <h2 id="ledger-debit-title">扣分记录</h2>
+                  <ol class="ledger-list" tabindex="0" aria-label="我的瓜标值扣分记录，可上下滚动查看" data-points-ledger-debit><li class="ledger-empty">登录后查看本人明细</li></ol>
+                  <p class="table-note" role="status" data-ledger-debit-note>登录后查看本人明细</p>
+                  <div class="board-pagination"><button class="btn btn-glass btn-sm" type="button" data-ledger-debit-prev disabled>上一页</button><span data-ledger-debit-page></span><button class="btn btn-glass btn-sm" type="button" data-ledger-debit-next disabled>下一页</button></div>
+                </section>
+              </div>
               </div>
             </details>
 
