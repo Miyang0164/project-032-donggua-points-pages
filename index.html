@@ -8,8 +8,8 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https://*.douyucdn.cn https://douyucdn.cn; font-src 'self'; connect-src https://apixixi.63136.icu; base-uri 'none'; form-action 'none'; object-src 'none'" />
     <link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon-yixing-64-rz_4wNdY.png" />
     <title>半亩瓜田</title>
-    <script type="module" crossorigin src="./assets/index-h0s1EbWr.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CNuupqkz.css">
+    <script type="module" crossorigin src="./assets/index-pYLkLwW3.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-eqdy14sb.css">
   </head>
   <body>
     <div class="app">
@@ -110,8 +110,9 @@
                 </div>
                 <div class="balance-actions">
                   <button class="btn btn-white btn-sm" type="button" data-nav="auth" data-auth-tab="login" data-points-login>登录后查看</button>
-                  <button class="btn btn-glass btn-sm" type="button" data-points-refresh>刷新数据</button>
+                  <button class="btn btn-glass btn-sm" type="button" data-points-retry hidden>重试</button>
                 </div>
+                <p class="read-status" role="status" data-points-updated>进入本页后自动读取</p>
               </div>
 
               <div class="stat-grid">
@@ -293,17 +294,19 @@
                 <p class="auth-help">最近观察昵称：<strong data-account-nickname></strong><br />斗鱼 UID：<span data-account-uid></span><br />斗鱼等级：<span data-account-level></span><br />冬瓜强粉丝牌：<span data-account-badge></span></p><p class="auth-help">资料来自发码验证及最近收到的礼物、签到；未佩戴本直播间粉丝牌的消息不会覆盖已有粉丝牌资料。</p>
                 <div class="binding-info"><span class="field-label">我的瓜标值 · 当前账户余额</span><strong class="account-balance mono" data-account-balance></strong><span class="auth-help">累计计分鱼翅：<span data-account-progress></span></span></div>
                 <section class="checkin-card" data-checkin aria-label="每日签到">
-                  <div class="account-heading"><h3>每日签到</h3><button class="btn btn-white btn-sm" type="button" data-checkin-refresh>刷新签到</button></div>
+                  <div class="account-heading"><h3>每日签到</h3><button class="btn btn-white btn-sm" type="button" data-checkin-retry hidden>重试</button></div>
                   <p class="pill" data-checkin-state>正在读取签到状态…</p>
                   <div class="checkin-metrics"><div><span>连续签到</span><strong><span data-checkin-streak>—</span> 天</strong></div><div><span>累计签到</span><strong><span data-checkin-days>—</span> 天</strong></div><div><span>今日获得</span><strong data-checkin-reward>—</strong></div></div>
                   <p class="auth-help" data-checkin-next></p><p class="auth-help" data-checkin-rule></p>
+                  <p class="auth-help" role="status" data-checkin-updated></p>
                   <p class="auth-help" role="status" data-checkin-note>在直播间发送 #签到，签到奖励计入账户瓜标值。</p>
                   <details><summary>最近31次签到</summary><ol class="checkin-history" data-checkin-history></ol></details>
                 </section>
                 <button class="btn btn-white btn-block" type="button" data-logout>退出登录</button>
               </div>
               <p class="auth-note" role="status" aria-live="polite" data-auth-note>正在读取登录状态…</p>
-              <button class="btn btn-white btn-sm account-refresh" type="button" data-refresh-account>刷新登录状态</button>
+              <p class="auth-help" role="status" data-account-updated>正在读取登录状态…</p>
+              <button class="btn btn-white btn-sm account-refresh" type="button" data-account-retry hidden>重试</button>
               <p class="auth-help account-rules" data-account-rules>正在读取计分规则…</p>
               <p class="auth-legal">登录状态在此浏览器最多保留 90 天；公共设备用完请退出。请勿使用斗鱼账号密码注册本网站。</p>
             </div>
@@ -326,7 +329,7 @@
             </form>
           </div>
           <div class="feedback-card" data-feedback-receipt hidden><h2>已收到你的反馈</h2><p>提交成功不代表数据将自动更改。请保存下方私密链接，查看处理进度或补充说明。</p><p>反馈编号：<strong data-feedback-number></strong></p><label>私密查询链接<input data-feedback-link readonly aria-label="私密查询链接" /></label><p class="feedback-help">持有链接的人可以查看问题内容和回复，请勿公开分享。链接丢失后可使用已填写的联系方式联系维护者。</p><button type="button" class="btn btn-dark" data-feedback-track>查看处理进度</button></div>
-          <div class="feedback-card" data-feedback-detail hidden><h2>反馈处理进度</h2><p data-feedback-state></p><p data-feedback-original class="feedback-pre"></p><h3>维护者回复</h3><p data-feedback-reply class="feedback-pre"></p><div data-feedback-messages></div><button type="button" class="text-action" data-feedback-reload>刷新处理进度</button><form data-feedback-supplement><label>补充说明<textarea name="content" required minlength="10" maxlength="2000" rows="4" placeholder="补充时间、异常记录等信息（10～2000字）"></textarea></label><div data-feedback-captcha-supplement class="feedback-captcha"><button type="button" class="captcha-refresh" aria-label="刷新补充验证码"><img alt="补充说明图片验证码，点击可刷新" width="160" height="60" /><span>换一张</span></button><label>图片验证码<input name="captcha" required maxlength="10" autocomplete="off" placeholder="输入图中文字" /></label></div><p class="feedback-help">补充说明与新反馈共用提交额度；每条反馈最多补充10次。</p><button type="submit" class="btn btn-dark">提交补充说明</button></form></div>
+          <button type="button" class="text-action" data-feedback-retry hidden>重试</button><div class="feedback-card" data-feedback-detail hidden><h2>反馈处理进度</h2><p data-feedback-state></p><p data-feedback-original class="feedback-pre"></p><h3>维护者回复</h3><p data-feedback-reply class="feedback-pre"></p><div data-feedback-messages></div><p class="feedback-help" role="status" data-feedback-updated></p><form data-feedback-supplement><label>补充说明<textarea name="content" required minlength="10" maxlength="2000" rows="4" placeholder="补充时间、异常记录等信息（10～2000字）"></textarea></label><div data-feedback-captcha-supplement class="feedback-captcha"><button type="button" class="captcha-refresh" aria-label="刷新补充验证码"><img alt="补充说明图片验证码，点击可刷新" width="160" height="60" /><span>换一张</span></button><label>图片验证码<input name="captcha" required maxlength="10" autocomplete="off" placeholder="输入图中文字" /></label></div><p class="feedback-help">补充说明与新反馈共用提交额度；每条反馈最多补充10次。</p><button type="submit" class="btn btn-dark">提交补充说明</button></form></div>
           <p class="feedback-status" data-feedback-status role="status" aria-live="polite"></p>
         </section>
       </main>
@@ -336,7 +339,7 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <img class="brand-mark brand-mark-sm" src="./assets/logo-yixing-320-CCQXgbi0.webp" width="320" height="273" loading="lazy" decoding="async" alt="" />
-            <div><strong>半亩瓜田</strong><span class="footer-sub">站点 v0.16.0</span></div>
+            <div><strong>半亩瓜田</strong><span class="footer-sub">站点 v0.16.1</span></div>
           </div>
           <nav class="footer-nav" aria-label="页脚导航">
             <button type="button" data-nav="home">首页</button>
