@@ -1,5 +1,5 @@
 {
-  "version": "0.17.2",
-  "sourceCommit": "dc552c618a3a8aaf24df14a765437fff5c1de808",
-  "stage": "full-board-names"
+  "version": "0.19.0",
+  "sourceCommit": "07f8fa9f79d6683429ba93cabacba8a6ad8f4f49",
+  "stage": "authenticated-community"
 }
