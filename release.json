@@ -1,5 +1,5 @@
 {
-  "version": "0.17.0",
-  "sourceCommit": "4a9158481e54021b36c981b70cd518db12578ba9",
-  "stage": "viewer-ledger-gift-details"
+  "version": "0.17.1",
+  "sourceCommit": "8a8e2df56675759441b4bd39dcbc8b25703aa4e4",
+  "stage": "compact-viewer-ledger"
 }
