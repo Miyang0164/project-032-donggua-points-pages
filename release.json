@@ -1,5 +1,5 @@
 {
-  "version": "0.32.1",
-  "sourceCommit": "5a013e0cdbc9033c21618b5278e4ca75ae3a3ec8",
-  "stage": "harvest-interactive-charts"
+  "version": "0.32.2",
+  "sourceCommit": "a176a582610ae0f18bc32021f633c85c319222da",
+  "stage": "harvest-wide-live-first"
 }
