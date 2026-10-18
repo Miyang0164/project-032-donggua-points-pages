@@ -1,5 +1,5 @@
 {
-  "version": "0.33.1",
-  "sourceCommit": "dc08cc476e63303d8dd2914e0e6cb33753399e11",
-  "stage": "aligned-page-widths"
+  "version": "0.33.2",
+  "sourceCommit": "10ca9c3db3256c9184e3949b2fea411f538c1a7a",
+  "stage": "community-soft-scrollbars"
 }
