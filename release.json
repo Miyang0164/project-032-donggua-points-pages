@@ -1,5 +1,5 @@
 {
-  "version": "0.32.0",
-  "sourceCommit": "17407ae88ba1411f9a62511422a620485dfb4565",
-  "stage": "harvest-room-detail"
+  "version": "0.32.1",
+  "sourceCommit": "5a013e0cdbc9033c21618b5278e4ca75ae3a3ec8",
+  "stage": "harvest-interactive-charts"
 }
