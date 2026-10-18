@@ -1,0 +1,1 @@
+function e(e,t){if(!e)return[];let n=e.split(`,`).map(e=>e.trim()).filter(Boolean);return Array.isArray(t)?t.filter(e=>n.includes(String(e.dictValue))).map(e=>({label:e.dictLabel,dictValue:e.dictValue,iconUrl:e.iconUrl||``})):[]}export{e as t};
